@@ -1,1 +1,27 @@
-﻿
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NotasMatiasMonteros.AboutPage"
+             Title="Sobre mí">
+
+    <VerticalStackLayout Padding="20" Spacing="20">
+
+        <!-- Ícono -->
+        <Image Source="about.png"
+               WidthRequest="100"
+               HeightRequest="100"
+               HorizontalOptions="Center" />
+
+        <!-- Nombre -->
+        <Label Text="Matias Monteros"
+               FontSize="24"
+               HorizontalOptions="Center" />
+
+        <!-- Descripción -->
+        <Label Text="Soy Matías, un apasionado por la musica y los videojuegos. Me encanta Fred Again y los shooters."
+               FontSize="16"
+               TextColor="Gray"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center" />
+    </VerticalStackLayout>
+</ContentPage>
