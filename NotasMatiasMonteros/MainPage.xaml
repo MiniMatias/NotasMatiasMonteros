@@ -9,7 +9,7 @@
             Spacing="25">
             <Image
                 Source="main.png"
-                HeightRequest="185"
+                HeightRequest="200"
                  />
             <Label
                 x:Name="LabelArchivo"

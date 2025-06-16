@@ -7,7 +7,7 @@
     Title="Matias Monteros">
 
     <!-- Página principal -->
-    <FlyoutItem Title="Notas" Icon="note.png">
+    <FlyoutItem Title="Notas" Icon="main.png">
         <ShellContent Title="Inicio" ContentTemplate="{DataTemplate local:MainPage}" />
     </FlyoutItem>
 
