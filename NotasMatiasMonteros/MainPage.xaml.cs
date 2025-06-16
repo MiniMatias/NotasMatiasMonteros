@@ -1,24 +1,28 @@
-﻿namespace NotasMatiasMonteros
+﻿using System.Threading.Tasks;
+
+namespace NotasMatiasMonteros
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
+        private FileRepository _fileRepository;
         public MainPage()
         {
+            _fileRepository = new FileRepository();
             InitializeComponent();
+            CargarInformacionArchivo();
         }
 
-        private void OnCounterClicked(object? sender, EventArgs e)
+
+        private async void CargarInformacionArchivo()
         {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            string texto = await _fileRepository.DevuelveInformacionArchivoAsync();
+            LabelArchivo.Text = texto;
+        }
+        private async void BtnGuardarArchivo_Clicked(object sender, EventArgs e)
+        {
+            string texto = TxtArchivo.Text;
+            await _fileRepository.GenerarArchivoAsync(texto);
+            CargarInformacionArchivo();
         }
     }
 }
